@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "Block Party",
+  "short_name": "Block Party",
+  "description": "A property-themed match-3 puzzle game. Match Singapore homes to build out the estate across 15 blocks.",
+  "lang": "en-SG",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#DDF0E5",
+  "theme_color": "#DDF0E5",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "screenshots": [
+    { "src": "/screenshots/map.png", "sizes": "780x1688", "type": "image/png", "form_factor": "narrow", "label": "Pick a block on the estate map" },
+    { "src": "/screenshots/game.png", "sizes": "780x1688", "type": "image/png", "form_factor": "narrow", "label": "Match homes to clear plots, scaffolding and roadblocks" }
+  ]
+}
