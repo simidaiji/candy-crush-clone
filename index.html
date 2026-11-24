@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#DDF0E5">
+<meta name="theme-color" content="#FF8F3F">
 <meta name="description" content="Block Party: a property-themed match-3 puzzle game. Match Singapore homes to build out the estate across 15 blocks.">
 <title>Block Party</title>
 <link rel="manifest" href="/manifest.webmanifest">
@@ -23,7 +23,7 @@
   src:url(/fonts/bricolage-grotesque-latin.woff2) format('woff2-variations'),url(/fonts/bricolage-grotesque-latin.woff2) format('woff2');
 }
 :root{
-  --mint:#DDF0E5; --mint-2:#C6E2D3; --grid:rgba(24,38,58,.06);
+  --bg:#FF8F3F; --grid:rgba(24,38,58,.07);
   --slate:#203041; --tile:#34485D; --tile-alt:#2E4155;
   --ink:#18263A; --muted:#4E6072;
   --sign:#FFC83A; --sign-press:#D29A12;
@@ -34,7 +34,7 @@
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 body{
-  background-color:var(--mint);
+  background-color:var(--bg);
   background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
   background-size:28px 28px;
   color:var(--ink);
@@ -81,11 +81,11 @@ button{font:inherit;color:inherit;cursor:pointer}
 .skyline svg{display:block;width:56px;height:56px;margin-bottom:-6px}
 .skyline svg:nth-child(2){width:64px;height:64px}
 .skyline svg:nth-child(6){width:62px;height:62px}
-.lede{margin:12px 20px 0;font-size:16px;line-height:1.45;color:var(--muted);max-width:34ch}
+.lede{margin:12px 20px 0;font-size:16px;line-height:1.45;color:#3A2516;max-width:34ch}
 .map-scroll{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;margin-top:6px;touch-action:pan-y}
 .road{position:relative;margin:0 16px}
 .road-svg{position:absolute;left:0;top:0;pointer-events:none}
-.road-base{fill:none;stroke:#BBD6C8;stroke-width:22;stroke-linecap:round}
+.road-base{fill:none;stroke:#FFC08C;stroke-width:22;stroke-linecap:round}
 .road-line{fill:none;stroke:#fff;stroke-width:3;stroke-dasharray:10 12;stroke-linecap:round}
 .plaque{position:absolute;transform:translate(-50%,-50%);width:78px;height:84px;border:0;border-radius:18px;
   background:var(--slate);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6px 0 8px;
@@ -97,10 +97,10 @@ button{font:inherit;color:inherit;cursor:pointer}
 .plaque .st svg{width:15px;height:15px}
 .plaque.current{background:var(--sign);color:var(--ink);box-shadow:0 5px 0 var(--sign-press)}
 .plaque.current::after{content:"";position:absolute;inset:-7px;border-radius:24px;border:3px solid var(--sign);animation:ring 1.8s ease-out infinite}
-.plaque.locked{background:#B7CDC1;color:#61776B;box-shadow:0 5px 0 #9DB6A9}
+.plaque.locked{background:#FFC495;color:#9C4A17;box-shadow:0 5px 0 #E2894A}
 .plaque.locked .st svg{width:16px;height:16px}
 @keyframes ring{0%{opacity:.9;transform:scale(.92)}100%{opacity:0;transform:scale(1.2)}}
-.map-foot{padding:12px 20px calc(16px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--mint) 30%)}
+.map-foot{padding:12px 20px calc(16px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 30%)}
 
 /* ---------- game ---------- */
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 4px}
@@ -124,7 +124,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .meter .fill{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:var(--slate);width:0;transition:width .35s}
 .meter .mk{position:absolute;top:50%;width:22px;height:22px;transform:translate(-50%,-50%)}
 .meter .mk svg{width:100%;height:100%}
-.meter .mk svg{fill:#C7D5CE}
+.meter .mk svg{fill:#FFD9BC}
 .meter .mk.on svg{fill:var(--sign)}
 
 .play{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
@@ -429,7 +429,7 @@ document.getElementById('sprite').innerHTML = `
 <symbol id="sym-star" viewBox="0 0 100 100"><path d="${STAR}" stroke="#203041" stroke-width="6" stroke-linejoin="round"/></symbol>
 <symbol id="sym-starfill" viewBox="0 0 100 100"><path d="${STAR}" fill="#FFC83A" stroke="#18263A" stroke-width="6" stroke-linejoin="round"/></symbol>
 <symbol id="sym-starempty" viewBox="0 0 100 100"><path d="${STAR}" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="7" stroke-linejoin="round"/></symbol>
-<symbol id="sym-padlock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="#61776B"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="#61776B" stroke-width="2.4"/></symbol>
+<symbol id="sym-padlock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="#9C4A17"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="#9C4A17" stroke-width="2.4"/></symbol>
 </defs></svg>`;
 
 /* =========================================================
