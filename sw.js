@@ -1,6 +1,6 @@
 // Block Party service worker: makes the game load instantly and play offline.
 // Bump VERSION when you want installed copies to drop their old cache.
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CACHE = `blockparty-${VERSION}`;
 const PRECACHE = [
   '/',
